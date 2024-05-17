@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-primary pb-16">
-        <div>
+        <div className="mt-[-5px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
             <path
               fill="#ffffff"
@@ -15,11 +15,11 @@ export default function Footer() {
             ></path>
           </svg>
         </div>
-        <div className="flex justify-center items-center gap-[10vw] pt-6">
+        <div className="flex justify-center items-center gap-[10vw] pt-6 md:flex-row flex-col">
           <div className="flex justify-center items-center">
             <img src={logo} alt="" className="h-[150px] w-[150px]" />
           </div>
-          <div className="flex justify-around gap-14 text-[18px] font-Montserrat text-white ">
+          <div className="flex md:justify-around md:gap-14 text-[18px] font-Montserrat text-white flex-wrap gap-8 justify-center  ">
             <div className="flex flex-col gap-2">
               <div className="font-medium">Product</div>
               <div className="flex flex-col ">

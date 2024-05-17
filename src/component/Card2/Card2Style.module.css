@@ -1,0 +1,72 @@
+.card {
+  height: 300px;
+  width: 210px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon {
+  box-sizing: content-box;
+  border: 5px solid #98c0db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  position: relative;
+  top: -60px;
+  background-color: white;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.icon:after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  right: -55px;
+  width: 26px;
+  height: 50px;
+  background: transparent;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: -10px -15px 0 15px #fff;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: -55px;
+  width: 26px;
+  height: 50px;
+  background: transparent;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: 10px -15px 0 15px #fff;
+}
+.icon img {
+  height: 60px;
+  width: 60px;
+}
+.card:hover {
+  .icon {
+    box-shadow: 3px #fff;
+  }
+}
+.card:hover .icon {
+  box-shadow: 0 0 15px 3px #98c0db;
+}
+.content {
+  position: relative;
+  top: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content p {
+  text-align: center;
+}

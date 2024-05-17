@@ -20,7 +20,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <header className="fixed flex justify-around h-[80px] top-0 bg-white shadow-md bottom-0  font-Montserrat font-medium w-[100vw] ">
+      <header className="fixed z-50 flex justify-around h-[80px] top-0 bg-white shadow-md bottom-0  font-Montserrat font-medium w-[100vw] ">
         <div className="h-[80px] w-[100px] flex justify-center items-center">
           <img src={logo} alt="" className="h-[50px] w-[90px]" />
         </div>
