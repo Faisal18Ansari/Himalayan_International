@@ -148,15 +148,15 @@ export default function Home() {
         </div>
       </div>
       {/* Product section start from here*/ }
-      <div className="flex flex-col md:flex-row justify-center items-center gap-12 pt-16 ">
-        <div className="h-[410px] w-[260px] rounded-[15px]">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-12 pt-16 overflow-x-hidden ">
+        <div className="h-[410px] w-[250px] rounded-[15px]">
           <img
             src={productImage}
             alt=""
             className="h-[400px] w-[250px] object-cover rounded-[15px]"
           />
-        </div>
-        <div className="flex flex-col md:justify-between h-[410px] md:px-0 px-2 gap-8 md:gap-0">
+        </div> 
+        <div className="flex flex-col md:justify-between h-[410px] md:px-0 px-3 gap-8 md:gap-0">
           <div>
             <div className="text-secondary text-[2.5rem] font-Montserrat font-bold md:px-0 px-2">
               Product Name
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div>
+            <div className="pl-2">
               <button className="bg-secondary text-white font-medium rounded-[25px] px-4 py-1">
                 <Link>Learn more</Link>
               </button>
