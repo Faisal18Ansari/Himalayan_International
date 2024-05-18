@@ -1,4 +1,5 @@
-import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import img from "../assets/images/image43.png";
 import logo from "../assets/images/mainlogo.png";
 import img2 from "../assets/images/image12.png";
@@ -11,8 +12,11 @@ import img6 from "../assets/images/image16.png";
 import img7 from "../assets/images/image38.png";
 import img8 from "../assets/images/image39.png";
 import img9 from "../assets/images/image40.png";
+import img10 from "../assets/images/image41.png";
+import img11 from "../assets/images/image46.png";
 
 export default function Home() {
+  const [productImage, setProduct] = useState(img);
   const data = [
     {
       title: "OUR VISION",
@@ -49,6 +53,8 @@ export default function Home() {
       info: "We work to limit our carbon footprint and environmental effect by employing organic textiles and eco-friendly production techniques. ",
     },
   ];
+
+  const productData = [img, img10, img11];
   return (
     <>
       <div
@@ -141,6 +147,54 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* Product section start from here*/ }
+      <div className="flex flex-col md:flex-row justify-center items-center gap-12 pt-16 ">
+        <div className="h-[410px] w-[260px] rounded-[15px]">
+          <img
+            src={productImage}
+            alt=""
+            className="h-[400px] w-[250px] object-cover rounded-[15px]"
+          />
+        </div>
+        <div className="flex flex-col md:justify-between h-[410px] md:px-0 px-2 gap-8 md:gap-0">
+          <div>
+            <div className="text-secondary text-[2.5rem] font-Montserrat font-bold md:px-0 px-2">
+              Product Name
+            </div>
+            <div className="flex  items-center">
+              <p className="md:w-[350px] md:px-0 px-2 text-[0.9rem] font-Montserrat text-gray-500">
+                Himalaya International, We are a proud manufacturer and supplier
+                of the market, famed for having exceptional designing
+                capabilities. Our talent and superior craftsmanship wins over a
+                huge clientele every day..
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div>
+              <button className="bg-secondary text-white font-medium rounded-[25px] px-4 py-1">
+                <Link>Learn more</Link>
+              </button>
+            </div>
+            <div className="flex gap-4">
+              {productData.map((ele, index) => (
+                <div
+                  className="h-[110px] w-[110px] rounded-[15px] cursor-pointer flex justify-center items-center "
+                  key={index}
+                  onClick={() => setProduct(ele)}
+                >
+                  <img
+                    src={ele}
+                    alt={`Product ${index + 1}`}
+                    className="h-[90px] w-[90px] rounded-[10px] object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+        {/* Product section end here*/ }
     </>
   );
 }

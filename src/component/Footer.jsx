@@ -5,9 +5,13 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-primary pb-16">
-        <div className="mt-[-5px]">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
+      <footer className="bg-primary pb-16 relative pt-[20px] ">
+        <div className=" relative w-full top-[-20px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 240"
+            className="mt-[-5px]"
+          >
             <path
               fill="#ffffff"
               fill-opacity="1"
