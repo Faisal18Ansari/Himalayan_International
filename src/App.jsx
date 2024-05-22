@@ -4,6 +4,9 @@ import Home from './component/Home'
 import Navbar from './component/Navbar'
 import { Outlet } from 'react-router-dom'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
+import ContactForm from './component/ContactFrom'
+import Contact from './component/Contact'
+
 
 const Main=()=>{
 return(
@@ -25,7 +28,7 @@ const route= createBrowserRouter([{
     },
     {
       path:'contact/',
-      element:<Home/>
+      element:<Contact/>
     }
   ]
 }])

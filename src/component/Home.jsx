@@ -126,8 +126,8 @@ export default function Home() {
             </svg>
           </div>
         </div>
-        <div class="flex pb-14 items-center justify-center">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="flex pb-14 items-center justify-center">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
             {data.map((ele, index) => (
               <Card1 key={index} cardData={ele} />
             ))}

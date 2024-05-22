@@ -37,7 +37,7 @@ export default function Navbar() {
               <NavLink to="/">Product</NavLink>
             </li>
             <li>
-              <NavLink to="/">Contact</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </nav>
@@ -69,7 +69,7 @@ export default function Navbar() {
               <NavLink>Product</NavLink>
             </li>
             <li>
-              <NavLink>Contact</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
