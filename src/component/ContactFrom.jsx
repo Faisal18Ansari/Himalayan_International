@@ -26,15 +26,9 @@ export default function ContactForm() {
     // Clear form fields after submission
     setFormData({
       FName: "",
-      LName: "",
       Email: "",
-      phoneNumber: "",
-      CName: "",
-      companyWebsite: "",
-      Country: "",
-      Income: "",
-      know: "",
-      Agreed: false,
+      FeedBack: "",
+    
     });
   };
   return (
@@ -58,7 +52,7 @@ export default function ContactForm() {
                     htmlFor="FName"
                     className="absolute left-0 px-2 py-1 cursor-text peer-valid:text-xs peer-focus:text-xs peer-focus:-top-1 peer-valid:-top-1 peer-focus:text-blue-600 peer-valid:text-blue-600 transition-all"
                   >
-                    First name *
+                    Name *
                   </label>
                 </div>
                 

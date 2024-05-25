@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed z-50 flex justify-around h-[80px] top-0 bg-white shadow-md bottom-0  font-Montserrat font-medium w-[100vw] ">
-        <div className="h-[80px] w-[100px] flex justify-center items-center">
+       <div className="flex justify-between items-center w-[80vw]"> <div className="h-[80px] w-[100px] flex justify-center items-center">
           <img src={logo} alt="" className="h-[50px] w-[90px]" />
         </div>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
               <X onClick={toggleIcons} />
             )}
           </div>
-        </div>
+        </div></div>
 {/* mobile menu code*/}
         <div
           className={`absolute border-2 right-0 top-[80px] w-[50vw] h-[100vh] bg-white ${mobileNav} transition-all duration-[1s]`}

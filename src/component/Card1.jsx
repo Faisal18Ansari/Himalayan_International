@@ -3,7 +3,7 @@ export default function Card1(props) {
   return (
     <>
       <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-secondary rounded-[25px]">
-        <div class="h-[300px] w-[300px] rounded-[25px] overflow-hidden bg-transparent">
+        <div className="h-[300px] w-[300px] rounded-[25px] overflow-hidden bg-transparent">
           <img
             className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 rounded-none "
             src={img}
@@ -20,7 +20,7 @@ export default function Card1(props) {
           <p className="mb-3 z-10 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             {info}
           </p>
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/60 group-hover:via-black/60 group-hover:to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/60 group-hover:via-black/60 group-hover:to-black/70"></div>
         </div>
       </div>
     </>

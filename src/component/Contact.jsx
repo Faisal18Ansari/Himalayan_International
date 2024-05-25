@@ -5,7 +5,8 @@ export default function Contact() {
   return (
     <>
       <div className="flex justify-center items-center px-5 md:px-0 overflow-x-hidden ">
-        <div className="flex flex-col gap-6 py-10">
+        
+        <div className="flex flex-col gap-6 py-10 ">
           <div className="flex md:justify-between justify-center md:items-center flex-col md:flex-row gap-5 md:gap-0">
             <div className="flex flex-col justify-center items-center md:items-start md:justify-start md:text-[2rem] text-[1.5rem] font-Montserrat font-bold text-secondary">
               <span>Ensure that your</span>
