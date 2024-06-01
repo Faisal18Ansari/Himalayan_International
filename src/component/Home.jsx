@@ -24,6 +24,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Home() {
   const [productImage, setProduct] = useState(img);
+  const [homeLogoStyle,sethomeLogoStyle]=useState('translate-y-[100vh] duration-[1s] opacity-0 ')
 
   const data = [
     {
@@ -83,6 +84,9 @@ export default function Home() {
       setTestimonial(Testimonial[index + 1]);
     }
   };
+  const homeAnimation=()=>{
+  sethomeLogoStyle('translate-y-[0vh] duration-[1s] opacity-100 ')
+  }
   return (
     <>
       <div
@@ -93,8 +97,9 @@ export default function Home() {
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
+        onLoad={homeAnimation}
       >
-        <div className="flex flex-col justify-center items-center gap-4 ">
+        <div className={`flex flex-col justify-center items-center gap-4 ${homeLogoStyle}  `}>
           <div>
             <img src={logo} alt="" />
           </div>
@@ -107,8 +112,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex  justify-center items-center  py-6 ">
-        <div className="flex flex-col justify-center gap-6 md:w-[80vw]">
+      <div className="flex  justify-center items-center  py-6  ">
+        <div className="flex flex-col justify-center gap-6 md:w-[80vw]  xl:w-[1100px]">
           <div className="flex flex-col justify-center items-center font-Montserrat">
             <span className="text-secondary text-[1.4rem] font-semibold ">
               Who We are
@@ -132,7 +137,7 @@ export default function Home() {
               The Tale Of The Vision Crafter's Journey
             </div>
             <div className="flex justify-center items-center">
-              <p className="text-center text-[1.2rem] md:w-[80vw] px-2 font-medium">
+              <p className="text-center text-[1.2rem] md:w-[80vw]  xl:w-[1100px] px-2 font-medium">
                 Himalaya International, We are a proud manufacturer and supplier
                 of the market, famed for having exceptional designing
                 capabilities. Our talent and superior craftsmanship wins over a
@@ -157,7 +162,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex pb-14 items-center justify-center ">
-          <div className="flex flex-wrap justify-between items-center w-[80vw] flex-col md:flex-row gap-8">
+          <div className="flex flex-wrap justify-between items-center w-[80vw]  xl:w-[1100px] flex-col md:flex-row gap-8">
             {data.map((ele, index) => (
               <Card1 key={index} cardData={ele} />
             ))}
@@ -172,7 +177,7 @@ export default function Home() {
           </span>
         </div>
         <div className="flex  pb-20 pt-20 items-center justify-center  bg-primary">
-          <div className="flex flex-wrap   flex-col md:flex-row md:gap-20 gap-[80px] w-[80vw] justify-between items-center ">
+          <div className="flex flex-wrap   flex-col md:flex-row md:gap-20 gap-[80px] w-[80vw]  xl:w-[1100px] justify-between items-center ">
             {data2.map((ele, index) => (
               <Card2 key={index} cardData={ele} />
             ))}
@@ -226,34 +231,34 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="hidden md:flex justify-center items-center flex-col gap-4 font-Montserrat pb-10 pt-16">
+{/*filler content */}
+      <div className=" flex justify-center items-center flex-col gap-4 font-Montserrat pb-10 pt-16 overflow-x-hidden">
         <div className="flex flex-col gap-1 justify-center items-center">
           <span className="text-gray-500 text-[1.5rem] font-medium">
             Quality that we provide
           </span>
-          <span className="text-[2rem] font-semibold">
+          <span className="text-[2rem] text-center font-semibold">
             Creativity Knows No Bounds
           </span>
         </div>
         <div
-          className="w-[80vw] grid grid-cols-12 grid-rows-2 gap-3"
+          className="w-[90vw] xl:w-[1100px] grid grid-cols-12 md:grid-rows-2 grid-rows-12   gap-3"
           style={{ gridTemplateRows: "1fr 0.5fr" }}
         >
-          <div className="col-span-3 w-[100%]">
-            <img src={img13} alt="" className="object-cover w-[100%]" />
+          <div className="md:col-span-3 col-span-6 md:row-span-1 row-span-5 ro w-[100%] md:h-[100%] h-[300px] rounded-[20px]">
+            <img src={img13} alt="" className="object-cover w-[100%] md:h-[100%] h-[300px] rounded-[20px]" />
           </div>
-          <div className="col-span-3 col-start-4 border-2 border-gray-300 rounded-[20px] flex justify-center items-center">
-            <p className="text-center text-[1.3rem] text-gray-400 px-3">
+          <div className="md:col-span-3 row-span-5 md:row-span-1 col-span-6 col-start-7 md:col-start-4 border-2 border-gray-300 rounded-[20px] flex justify-center items-center md:h-[100%] h-[300px]">
+            <p className="text-center md:text-[1.3rem] text-[0.8rem] text-gray-400 px-3">
               With a tradition of unrivaled workmanship and high standards, we
               welcome you to experience the ultimate of elegance and
               sophistication.
             </p>
           </div>
-          <div className="col-span-6 col-start-7 flex justify-between flex-col border-2 border-gray-300 rounded-[20px]">
+          <div className="md:col-span-6 md:col-start-7 row-start-6 row-span-5 md:row-span-1 md:row-start-1 col-span-12 flex justify-between flex-col border-2 border-gray-300 rounded-[20px]">
             <div className="flex flex-col justify-center px-4 py-2  ">
               <div className="flex justify-between items-center ">
-                <div className="text-[1.5rem] font-bold flex flex-col ">
+                <div className="md:text-[1.5rem] text-[0.8rem] font-bold flex flex-col ">
                   <span>Create your own</span>
                   <span>Story!!</span>
                 </div>
@@ -262,7 +267,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="text-gray-400 text-[0.9rem]">
+                <p className="text-gray-400 md:text-[0.9rem] text-[0.7rem]">
                   We take pleasure in presenting a diverse range of distinctive
                   goods to meet all of your fashion needs. We have you covered,
                   whether you're looking for the perfect outfit for a big event
@@ -277,23 +282,23 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img src={img16} alt="" />
+              <img src={img16} alt="" className="w-[100%]" />
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="md:col-span-4 col-span-6 row-start-11 md:row-start-2 md:row-span-1 row-span-2 rounded-[20px]">
             <img
               src={img14}
               alt=""
-              className="object-cover w-[100%] h-[100%]"
+              className="object-cover w-[100%] h-[100%] rounded-[20px]"
             />
           </div>
-          <div className="col-span-4 col-start-5 border-2 border-gray-300 rounded-[20px] flex justify-center items-center">
-            <p className="text-center text-[1.3rem] text-gray-400 px-3">
+          <div className="md:col-span-4 md:col-start-5 col-span-6 col-start-7 row-start-11 md:row-start-2 row-span-2 md:row-span-1 border-2 border-gray-300 rounded-[20px] flex justify-center items-center h-[200px] md:h-[100%]">
+            <p className="text-center md:text-[1.3rem] text-[0.8rem]  text-gray-400 px-3">
               Drawing inspiration from India's magnificent past, we provide a
               regal delight to suit every distinct taste and budget.
             </p>
           </div>
-          <div className="col-span-4 col-start-9">
+          <div className="hidden md:grid col-span-4 col-start-9">
             <img
               src={img15}
               alt=""
@@ -302,27 +307,28 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex flex-col gap-5 justify-center items-center font-Montserrat pt-10 pb-4">
-        <div className="flex flex-col w-[80vw] justify-center items-center">
+      {/*testimonial section */}
+      <div className=" flex flex-col gap-5 justify-center items-center font-Montserrat pt-10 pb-4">
+        <div className="flex flex-col w-[80vw] xl:w-[1100px] justify-center items-center">
           <span className="text-[1.4rem] text-gray-500 font-semibold">
             Testimonial
           </span>
-          <span className="text-[1.6rem] font-semibold text-center ">
+          <span className="md:text-[1.6rem] text-[1.3rem] font-semibold text-center ">
             Experience our excellence through the words of our customers.
           </span>
         </div>
-        <div className="flex w-[80vw] relative rounded-[25px] my-3 mx-4  ">
-          <div className="flex h-[300px] bg-gradient-to-r from-[#CBCBCB] to-[#DEDEDE] rounded-[10px] box-border py-[4rem]">
-            <div className="w-[50%] flex justify-center items-center ">
-              <p className="text-[4rem] font-bold">{testimonial.number}</p>
+        <div className="flex  w-[80vw]  xl:w-[1100px] relative rounded-[25px] my-3 mx-4  ">
+          <div className="flex md:flex-row flex-col h-[300px] bg-gradient-to-r from-[#CBCBCB] to-[#DEDEDE] rounded-[10px] box-border md:py-[4rem]">
+            <div className="md:w-[50%] flex justify-center items-center ">
+              <p className="md:text-[4rem] text-[2.5rem] font-bold">{testimonial.number}</p>
             </div>
             <div>
-              <p className="w-[70%]  text-[1.3rem] font-semibold border-l-4 border-l-black pl-4">
+              <p className="text-center md:text-left lg:w-[70%] md:w-[80%]  lg:text-[1.3rem] md:text-[1rem] text-[0.9rem] font-semibold md:border-l-4 md:border-l-black md:pl-4 px-3 md:px-0">
                 {testimonial.text}.
               </p>
             </div>
           </div>
-          <div className="absolute z-10 right-[-30px] h-[350px] top-[20px] ">
+          <div className="hidden md:block absolute z-10 right-[-30px] h-[350px] top-[20px] ">
             <img src={img12} alt="" className="h-[350px]" />
           </div>
         </div>
@@ -347,8 +353,8 @@ export default function Home() {
           </span>
         </div>
       </div>
+       
 
-      {/* Product section end here*/}
     </>
   );
 }
