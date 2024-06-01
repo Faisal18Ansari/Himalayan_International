@@ -18,6 +18,10 @@ export default function Navbar() {
       setMobileNav("translate-x-[100%]");
     }
   };
+  const NavbarHandler=()=>{
+    setIsAlignJustifyVisible((prevState) => !prevState);
+      setMobileNav("translate-x-[100%]")
+  }
   return (
     <>
       <header className="fixed z-50 flex justify-around h-[80px] top-0 bg-white shadow-md bottom-0  font-Montserrat font-medium w-[100vw] ">
@@ -60,16 +64,16 @@ export default function Navbar() {
         >
           <ul className="text-[20px] font-medium font-Montserrat flex flex-col gap-4 px-8 py-8 ">
             <li>
-              <NavLink>Home</NavLink>
+              <NavLink to="/" onClick={NavbarHandler}>Home</NavLink>
             </li>
             <li>
-              <NavLink>About</NavLink>
+              <NavLink  onClick={NavbarHandler}>About</NavLink>
             </li>
             <li>
-              <NavLink>Product</NavLink>
+              <NavLink  onClick={NavbarHandler}>Product</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact"  onClick={NavbarHandler}>Contact</NavLink>
             </li>
           </ul>
         </div>
