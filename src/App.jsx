@@ -1,11 +1,10 @@
 import './App.css'
 import Footer from './component/Footer'
-import Home from './component/Home'
+import Home from './pages/Home'
 import Navbar from './component/Navbar'
 import { Outlet } from 'react-router-dom'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
-import ContactForm from './component/ContactFrom'
-import Contact from './component/Contact'
+import Contact from './pages/Contact'
 
 
 const Main=()=>{

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/images/image43.png";
+import img from "../assets/images/image70.png";
 import logo from "../assets/images/mainlogo.png";
-import img2 from "../assets/images/image12.png";
-import Card1 from "./Card1";
-import Card2 from "./Card2/Card2";
+import Card1 from "../component/Card1"
+import Card2 from "../component/Card2/Card2";
 import img3 from "../assets/images/image18.png";
-import img4 from "../assets/images/image19.png";
-import img5 from "../assets/images/image32.png";
+import img4 from "../assets/images/OurValue.png";
+import img5 from "../assets/images/OurVision.png";
 import img6 from "../assets/images/image16.png";
 import img7 from "../assets/images/image38.png";
 import img8 from "../assets/images/image39.png";
@@ -15,12 +14,13 @@ import img9 from "../assets/images/image40.png";
 import img10 from "../assets/images/image41.png";
 import img11 from "../assets/images/image46.png";
 import img12 from "../assets/images/Group63.png";
-import img13 from "../assets/images/image62.png";
-import img14 from "../assets/images/image64.png";
-import img15 from "../assets/images/image68.png";
+import img13 from "../assets/images/filler2.png";
+import img14 from "../assets/images/filler1.png";
+import img15 from "../assets/images/filler3.png";
 import img16 from "../assets/images/image66.png";
 import img17 from "../assets/images/mainlogonav.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ImageSlider from "../component/ImageSilder";
 
 export default function Home() {
   const [productImage, setProduct] = useState(img);
@@ -104,9 +104,9 @@ export default function Home() {
             <img src={logo} alt="" />
           </div>
           <div className="flex flex-col justify-center items-center text-[1.6rem] text-white font-Montserrat">
-            <span>Clothes for everyone</span>
+            <span>  Rugs for Everyone,</span>
             <span className="text-center">
-              for the special day, for everyday
+           for Everywhere, for Everyday
             </span>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Home() {
             </span>
           </div>
           <div className="flex justify-center items-center flex-col gap-8">
-            <img src={img2} alt="" className="px-4 md:px-0" />
+            <ImageSlider/>
             <div className="bg-primary md:w-[100%] w-[90%]  h-[80px] rounded-[10px]"></div>
           </div>
 
