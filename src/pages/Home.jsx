@@ -125,7 +125,11 @@ export default function Home() {
             </span>
           </div>
           <div className="flex justify-center items-center flex-col gap-8">
+          <div className="flex py-3  items-center justify-center">
+          <div className="relative overflow-hidden rounded-lg w-[80vw] xl:w-[1100px] aspect-[16/9]">
             <ImageSlider/>
+          </div>
+          </div>
             <div className="bg-primary md:w-[100%] w-[90%]  h-[80px] rounded-[10px]"></div>
           </div>
 

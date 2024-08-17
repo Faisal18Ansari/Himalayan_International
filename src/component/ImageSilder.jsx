@@ -36,7 +36,7 @@ const variants = {
   },
 }
 
-export default function ImageSlider() {
+export default function ImageSlider({isButton=true}) {
   const images = [
     img1,
     img2,
@@ -67,8 +67,7 @@ export default function ImageSlider() {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <div className="flex py-3  items-center justify-center">
-      <div className="relative overflow-hidden rounded-lg w-[80vw] xl:w-[1100px] aspect-[16/9]">
+<>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
             variants={variants}
@@ -82,19 +81,20 @@ export default function ImageSlider() {
             className="w-full h-full object-cover object-center aspect-[16/9]"
         />
          </AnimatePresence>
-        <button
+        {isButton && <button
           onClick={prevSlide}
           className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
         >
          <ArrowBigLeftDash />
-        </button>
-        <button
+        </button>}
+        {
+        isButton&&<button
           onClick={nextSlide}
           className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
         >
           <ArrowBigRightDash />
         </button>
-      </div>
-    </div>
+        }
+     </>
   );
 }

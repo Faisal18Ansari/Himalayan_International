@@ -38,7 +38,7 @@ export default function Navbar() {
               <NavLink to="/">About</NavLink>
             </li>
             <li>
-              <NavLink to="/">Product</NavLink>
+              <NavLink to="/product">Product</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
@@ -70,7 +70,7 @@ export default function Navbar() {
               <NavLink  onClick={NavbarHandler}>About</NavLink>
             </li>
             <li>
-              <NavLink  onClick={NavbarHandler}>Product</NavLink>
+              <NavLink to='/product'  onClick={NavbarHandler}>Product</NavLink>
             </li>
             <li>
               <NavLink to="/contact"  onClick={NavbarHandler}>Contact</NavLink>

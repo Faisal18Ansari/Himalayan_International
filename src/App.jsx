@@ -5,6 +5,7 @@ import Navbar from './component/Navbar'
 import { Outlet } from 'react-router-dom'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Contact from './pages/Contact'
+import Product from './pages/Product'
 
 
 const Main=()=>{
@@ -28,6 +29,10 @@ const route= createBrowserRouter([{
     {
       path:'contact/',
       element:<Contact/>
+    },
+    {
+      path:'product/',
+      element:<Product/>
     }
   ]
 }])
