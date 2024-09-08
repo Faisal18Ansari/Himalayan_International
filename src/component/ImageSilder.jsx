@@ -1,10 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { ArrowBigLeftDash,ArrowBigRightDash } from "lucide-react";
 import { AnimatePresence, motion } from 'framer-motion'
-import img1 from '../assets/images/image70.png'
-import img2 from '../assets/images/image61.png'
-import img3 from '../assets/images/image60.png'
-import img4 from '../assets/images/image18.png'
+
 
 
 const variants = {
@@ -17,7 +14,6 @@ const variants = {
   animate: {
     x: 0,
     opacity: 1,
-    transition: 'ease-in',
     transition: {
       x: { type: 'spring', stiffness: 200, damping: 30 },
       opacity: { duration: 0.1 },
@@ -27,7 +23,6 @@ const variants = {
     return {
       x: direction > 0 ? -900 : 900,
       opacity: 0,
-      transition: 'ease-in',
       transition: {
         x: { type: 'spring', stiffness: 200, damping: 30 },
         opacity: { duration: 0.1 },
@@ -36,13 +31,8 @@ const variants = {
   },
 }
 
-export default function ImageSlider({isButton=true}) {
-  const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    ];
+export default function ImageSlider({isButton=true,images}) {
+ 
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0)

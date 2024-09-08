@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../assets/images/image70.png";
 import logo from "../assets/images/mainlogo.png";
-import Card1 from "../component/Card1"
+import Card1 from "../component/Card1";
 import Card2 from "../component/Card2/Card2";
 import img3 from "../assets/images/image18.png";
 import img4 from "../assets/images/OurValue.png";
@@ -11,20 +11,25 @@ import img6 from "../assets/images/image16.png";
 import img7 from "../assets/images/image38.png";
 import img8 from "../assets/images/image39.png";
 import img9 from "../assets/images/image40.png";
-import img10 from "../assets/images/image41.png";
-import img11 from "../assets/images/image46.png";
 import img12 from "../assets/images/Group63.png";
 import img13 from "../assets/images/filler2.png";
 import img14 from "../assets/images/filler1.png";
 import img15 from "../assets/images/filler3.png";
 import img16 from "../assets/images/image66.png";
 import img17 from "../assets/images/mainlogonav.png";
+import moc1 from "../assets/images/Mockup1.png";
+import moc2 from "../assets/images/Mockup2.png";
+import moc3 from "../assets/images/Mockup3.png";
+import moc4 from "../assets/images/Mockup4.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ImageSlider from "../component/ImageSilder";
 
 export default function Home() {
-  const [productImage, setProduct] = useState(img);
-  const [homeLogoStyle,sethomeLogoStyle]=useState('translate-y-[100vh] duration-[1s] opacity-0 ')
+  const [productImage, setProduct] = useState("https://firebasestorage.googleapis.com/v0/b/himalayainternational-13dfa.appspot.com/o/all%20images%2Frag%20rugs%20white%2F2410.png?alt=media&token=b127457c-619c-4930-8703-92cc5b32cca9");
+  const Mockups = [moc1, moc2, moc3, moc4];
+  const [homeLogoStyle, sethomeLogoStyle] = useState(
+    "translate-y-[100vh] duration-[1s] opacity-0 "
+  );
 
   const data = [
     {
@@ -74,7 +79,11 @@ export default function Home() {
     },
   ];
   const [testimonial, setTestimonial] = useState(Testimonial[0]);
-  const productData = [img, img10, img11];
+  const productData = [
+    "https://firebasestorage.googleapis.com/v0/b/himalayainternational-13dfa.appspot.com/o/all%20images%2Frag%20rugs%20white%2F2410.png?alt=media&token=b127457c-619c-4930-8703-92cc5b32cca9",
+    "https://firebasestorage.googleapis.com/v0/b/himalayainternational-13dfa.appspot.com/o/all%20images%2Frag%20rugs%20white%2F2410-blue.png?alt=media&token=8f424cb2-f67f-4d1d-a4d4-d84dcb934da0",
+    "https://firebasestorage.googleapis.com/v0/b/himalayainternational-13dfa.appspot.com/o/all%20images%2Frag%20rugs%20white%2F2410-green.png?alt=media&token=e888bb85-9c99-40d4-bdeb-5ee5da765497",
+  ];
   const TestimonialFunction = (direction) => {
     if (direction == "left") {
       const index = testimonial.number - 1;
@@ -84,9 +93,9 @@ export default function Home() {
       setTestimonial(Testimonial[index + 1]);
     }
   };
-  const homeAnimation=()=>{
-  sethomeLogoStyle('translate-y-[0vh] duration-[1s] opacity-100 ')
-  }
+  const homeAnimation = () => {
+    sethomeLogoStyle("translate-y-[0vh] duration-[1s] opacity-100 ");
+  };
   return (
     <>
       <div
@@ -99,15 +108,15 @@ export default function Home() {
         }}
         onLoad={homeAnimation}
       >
-        <div className={`flex flex-col justify-center items-center gap-4 ${homeLogoStyle}  `}>
+        <div
+          className={`flex flex-col justify-center items-center gap-4 ${homeLogoStyle}  `}
+        >
           <div>
             <img src={logo} alt="" />
           </div>
           <div className="flex flex-col justify-center items-center text-[1.6rem] text-white font-Montserrat">
-            <span>  Rugs for Everyone,</span>
-            <span className="text-center">
-           for Everywhere, for Everyday
-            </span>
+            <span> Rugs for Everyone,</span>
+            <span className="text-center">for Everywhere, for Everyday</span>
           </div>
         </div>
       </div>
@@ -125,11 +134,11 @@ export default function Home() {
             </span>
           </div>
           <div className="flex justify-center items-center flex-col gap-8">
-          <div className="flex py-3  items-center justify-center">
-          <div className="relative overflow-hidden rounded-lg w-[80vw] xl:w-[1100px] aspect-[16/9]">
-            <ImageSlider/>
-          </div>
-          </div>
+            <div className="flex py-3  items-center justify-center">
+              <div className="relative overflow-hidden rounded-lg w-[80vw] xl:w-[1100px] aspect-[16/9]">
+                <ImageSlider images={Mockups} />
+              </div>
+            </div>
             <div className="bg-primary md:w-[100%] w-[90%]  h-[80px] rounded-[10px]"></div>
           </div>
 
@@ -200,7 +209,7 @@ export default function Home() {
         <div className="flex flex-col md:justify-between h-[410px] md:px-0 px-3 gap-8 md:gap-0">
           <div>
             <div className="text-secondary text-[2.5rem] font-Montserrat font-bold md:px-0 px-2">
-              Product Name
+              RAG RUGS
             </div>
             <div className="flex  items-center">
               <p className="md:w-[350px] md:px-0 px-2 text-[0.9rem] font-Montserrat text-gray-500">
@@ -214,7 +223,7 @@ export default function Home() {
           <div className="flex flex-col gap-4">
             <div className="pl-2">
               <button className="bg-secondary text-white font-medium rounded-[25px] px-4 py-1">
-                <Link>Learn more</Link>
+                <Link to="/product">Learn more</Link>
               </button>
             </div>
             <div className="flex gap-4">
@@ -235,7 +244,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-{/*filler content */}
+      {/*filler content */}
       <div className=" flex justify-center items-center flex-col gap-4 font-Montserrat pb-10 pt-16 overflow-x-hidden">
         <div className="flex flex-col gap-1 justify-center items-center">
           <span className="text-gray-500 text-[1.5rem] font-medium">
@@ -250,7 +259,11 @@ export default function Home() {
           style={{ gridTemplateRows: "1fr 0.5fr" }}
         >
           <div className="md:col-span-3 col-span-6 md:row-span-1 row-span-5 ro w-[100%] md:h-[100%] h-[300px] rounded-[20px]">
-            <img src={img13} alt="" className="object-cover w-[100%] md:h-[100%] h-[300px] rounded-[20px]" />
+            <img
+              src={img13}
+              alt=""
+              className="object-cover w-[100%] md:h-[100%] h-[300px] rounded-[20px]"
+            />
           </div>
           <div className="md:col-span-3 row-span-5 md:row-span-1 col-span-6 col-start-7 md:col-start-4 border-2 border-gray-300 rounded-[20px] flex justify-center items-center md:h-[100%] h-[300px]">
             <p className="text-center md:text-[1.3rem] text-[0.8rem] text-gray-400 px-3">
@@ -324,7 +337,9 @@ export default function Home() {
         <div className="flex  w-[80vw]  xl:w-[1100px] relative rounded-[25px] my-3 mx-4  ">
           <div className="flex md:flex-row flex-col h-[300px] bg-gradient-to-r from-[#CBCBCB] to-[#DEDEDE] rounded-[10px] box-border md:py-[4rem]">
             <div className="md:w-[50%] flex justify-center items-center ">
-              <p className="md:text-[4rem] text-[2.5rem] font-bold">{testimonial.number}</p>
+              <p className="md:text-[4rem] text-[2.5rem] font-bold">
+                {testimonial.number}
+              </p>
             </div>
             <div>
               <p className="text-center md:text-left lg:w-[70%] md:w-[80%]  lg:text-[1.3rem] md:text-[1rem] text-[0.9rem] font-semibold md:border-l-4 md:border-l-black md:pl-4 px-3 md:px-0">
@@ -357,8 +372,6 @@ export default function Home() {
           </span>
         </div>
       </div>
-       
-
     </>
   );
 }
