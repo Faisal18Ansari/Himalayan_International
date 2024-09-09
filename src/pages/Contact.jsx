@@ -41,7 +41,7 @@ export default function Contact() {
               <Phone />
               </span>
               <span className="text-[20px] font-medium">
-              +91 9582175717
+              +91 8860019570
               </span>
             </div>
             <div className=" hover:shadow-md hover:shadow-secondary   md:w-[300px] w-[100%] flex justify-center items-center bg-primary rounded-[10px] h-[80px] text-white gap-4">

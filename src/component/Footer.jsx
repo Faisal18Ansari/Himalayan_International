@@ -60,7 +60,7 @@ export default function Footer() {
                 </span>
                 <span className="flex flex-col ">
                   <span>Business Enquires</span>
-                  <span>+91 9582175717</span>
+                  <span>+91 8860019570</span>
                 </span>
               </div>
             </div>
