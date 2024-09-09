@@ -48,8 +48,10 @@ export default function Contact() {
               <span className="text-black font-semibold">
               <Mail />
               </span>
-              <span className="text-[15px] font-medium">
-                General123@gamil.com
+              <span className="text-[15px] font-medium flex flex-col">
+               <span>rufiishtiaqe@gmail.com</span>
+               <span>merchandiser.hi@gmail.com
+               </span>
               </span>
             </div>
             <div className=" hover:shadow-md hover:shadow-secondary   md:w-[300px] w-[100%] flex justify-center px-3 items-center bg-primary rounded-[10px] h-[80px] text-white gap-4">

@@ -28,30 +28,25 @@ export default function Footer() {
               <div className="font-medium">Product</div>
               <div className="flex flex-col ">
                 <span>
-                  <NavLink>Sari</NavLink>
+                  <NavLink to='/product'>RUGS</NavLink>
                 </span>
-                <span>
-                  <NavLink>Suit & Salwa</NavLink>r
-                </span>
-                <span>
-                  <NavLink>Curtain</NavLink>
-                </span>
+         
               </div>
             </div>
             <div className="flex flex-col gap-2">
               <div className="font-medium">Info</div>
               <div className="flex flex-col">
                 <span>
-                  <NavLink>Home</NavLink>
+                  <NavLink to='/'>Home</NavLink>
                 </span>
                 <span>
-                  <NavLink>About</NavLink>
+                  <NavLink to='/'>About</NavLink>
                 </span>
                 <span>
-                  <NavLink>Product</NavLink>
+                  <NavLink to='/product'>Product</NavLink>
                 </span>
                 <span>
-                  <NavLink>Contact</NavLink>
+                  <NavLink to='/contact'>Contact</NavLink>
                 </span>
               </div>
             </div>
@@ -60,7 +55,8 @@ export default function Footer() {
               <div className="flex flex-col gap-1">
                 <span className="flex flex-col ">
                   <span>General Enquires</span>
-                  <span>General123@gmail.com</span>
+                  <span>rufiishtiaqe@gmail.com</span>
+                  <span>merchandiser.hi@gmail.com</span>
                 </span>
                 <span className="flex flex-col ">
                   <span>Business Enquires</span>
